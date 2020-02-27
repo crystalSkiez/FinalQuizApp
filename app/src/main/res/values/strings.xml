@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FinalQuizApp</string>
+    <string name="yourapp">Your Stats</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="username">username</string>
+    <string name="score">score</string>
+    <string name="position">rank</string>
+    <string name="rank">rankval</string>
+</resources>
