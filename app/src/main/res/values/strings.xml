@@ -6,4 +6,11 @@
     <string name="score">score</string>
     <string name="position">rank</string>
     <string name="rank">rankval</string>
+    <string name="start">START</string>
+    <string name="true2">TRUE</string>
+    <string name="false2">FALSE</string>
+    <string name="question">QUESTION</string>
+    <string name="score2">SCORE</string>
+    <string name="number_correct">NUMBER CORRECT</string>
+    <string name="timer">TIMER</string>
 </resources>
