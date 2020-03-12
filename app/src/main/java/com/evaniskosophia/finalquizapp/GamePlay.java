@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GamePlay extends AppCompatActivity {
     SharedPreferences pref;
+    SharedPreferences.Editor edit;
+    Questions q;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +17,15 @@ public class GamePlay extends AppCompatActivity {
         setContentView(R.layout.game_layout);
 
         pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        SharedPreferences.Editor edit = pref.edit();
+        edit = pref.edit();
         edit.apply();
+
+        q = new Questions();
+
+    }
+
+    public void addQuestions(){
+
 
     }
 }
