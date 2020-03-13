@@ -2,20 +2,23 @@ package com.evaniskosophia.finalquizapp;
 
 import com.google.gson.Gson;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 public class Questions {
-    String question;
-    Boolean answer;
-    HashMap<String, Boolean> questions;
+    private String question;
+    private Boolean answer;
+    private HashMap<String, Boolean> questions;
+
     public Questions()
     {
+        questions = new HashMap<String, Boolean>();
         questions = makeMap();
-        question = getRandQuestion();
-        answer = getQuestionsAnswer();
-
+        getRandQuestion();
+        getQuestionsAnswer();
     }
 
     public HashMap<String, Boolean> makeMap(){
@@ -38,12 +41,27 @@ public class Questions {
         return questions;
     }
 
-    public String getRandQuestion(){
-        return "";
+    public void newQandA(){
+        getRandQuestion();
+        getQuestionsAnswer();
     }
 
-    public boolean getQuestionsAnswer(){
-        return true;
+    private void getRandQuestion(){
+        Set qs = questions.keySet();
+        int randint = (int)(Math.random()*qs.size()) + 1;
+        int index = 0;
+        String myq = "";
+        for (String s: questions.keySet()) {
+            if (index == randint)
+                myq = s;
+            index++;
+        }
+        question = myq;
+    }
+
+    private void getQuestionsAnswer(){
+        Boolean mya = questions.get(question);
+        answer = mya;
     }
 
     public String mapToString(){

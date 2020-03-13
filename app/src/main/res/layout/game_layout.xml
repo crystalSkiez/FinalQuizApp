@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CD3F51B5"
-    tools:context=".MainActivity">
+    tools:context=".GamePlay">
 
     <Button
         android:id="@+id/buttontrue"
@@ -14,6 +14,7 @@
         android:layout_marginEnd="52dp"
         android:background="#3CDD43"
         android:text="@string/true2"
+        android:onClick="onTrueClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,6 +27,7 @@
         android:layout_marginStart="52dp"
         android:background="#FF0505"
         android:text="@string/false2"
+        android:onClick="onFalseClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
