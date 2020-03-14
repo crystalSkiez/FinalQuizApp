@@ -13,4 +13,5 @@
     <string name="score2">SCORE</string>
     <string name="number_correct">NUMBER CORRECT</string>
     <string name="timer">TIMER</string>
+    <string name="time">Time: %1$d</string>
 </resources>

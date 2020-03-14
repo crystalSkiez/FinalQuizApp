@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.SettingInjectorService;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         edit = pref.edit();
         edit.putString("curr_username", "blank");
         edit.putInt("curr_score", 0);
+        edit.putInt("questions_correct", 0);
         edit.apply();
 
 
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void startGame(View view) {
         String username = ""+edit2.getText();
         edit.putString("curr_username", username);
+        edit.apply();
         //edit.putString("username", edit2.getText());
         Intent intent = new Intent(getApplicationContext(), GamePlay.class);
         startActivity(intent);
